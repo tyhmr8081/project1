@@ -54,7 +54,6 @@ boxContainer.style.cssText = `
     padding: clamp(5px, 1.5vw, 10px);
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: repeat(3, minmax(0, 1fr));
     gap: clamp(5px, 1.5vw, 10px);
 `;
 // create 9 boxes
