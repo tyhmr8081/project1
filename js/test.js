@@ -48,6 +48,7 @@ boxContainer.style.cssText = `
     width: 90%;
     max-width: 450px;
     aspect-ratio: 1 / 1;
+    height: auto;
     box-sizing: border-box;
     margin: 0 auto;
     padding: clamp(5px, 1.5vw, 10px);
