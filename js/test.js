@@ -45,10 +45,9 @@ let boxContainer=document.createElement("div");
 boxContainer.id="boxContainer";
 container.appendChild(boxContainer);
 boxContainer.style.cssText = `
-    width: 90%;
-    max-width: 450px;
+    width: min(90%, 450px);
     aspect-ratio: 1 / 1;
-    height: auto;
+    flex: 0 0 auto;
     box-sizing: border-box;
     margin: 0 auto;
     padding: clamp(5px, 1.5vw, 10px);
