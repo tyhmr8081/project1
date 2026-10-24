@@ -91,7 +91,7 @@ boxes.forEach(function(box) {
     }); 
 });
 let role=document.createElement("h3");
-role.textContent="X 's Turn";
+role.textContent="O 's Turn";
 container.appendChild(role);
 role.style.cssText = `
 width: min(200px, 90%);
