@@ -8,18 +8,19 @@ container.id="container";
 body.appendChild(container);
 
 container.style.cssText = `
-    width: min(94%, 650px);
+    width: 100%;
+    max-width: 720px;
     min-height: 100vh;
     box-sizing: border-box;
     margin: 0 auto;
-    padding: clamp(10px, 3vw, 24px);
     background-color: #08224d;
+    padding: clamp(10px, 2vw, 20px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
-    box-shadow: 0 0 10px 5px rgba(0,0,0,0.4);
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
 `;
 
 // create a header element
@@ -27,29 +28,32 @@ let header=document.createElement("h1");
 header.textContent="X O Game";
 container.appendChild(header);
 header.style.cssText = `
-font-size: clamp(28px, 5vw, 46px);
-color: white;
-width: 90%;
-background-color: red;
-padding: 10px 10px;
-margin: 0 auto;
-text-align: center;
-border-radius: 15px;
-font-weight: bold;
+    color: white;
+    width: 90%;
+    box-sizing: border-box;
+    background-color: red;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 15px;
+    font-size: clamp(28px, 5vw, 50px);
+    font-weight: bold;
 `;
 //create a div container for boxes
 let boxContainer=document.createElement("div");
 boxContainer.id="boxContainer";
 container.appendChild(boxContainer);
 boxContainer.style.cssText = `
-    width: 100%;
-    max-width: 450px;
+    width: 90%;
+    max-width: 600px;
     aspect-ratio: 1 / 1;
     box-sizing: border-box;
+    margin: 0 auto;
+    padding: clamp(5px, 1.5vw, 10px);
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-rows: repeat(3, minmax(0, 1fr));
-    gap: clamp(5px, 1.5vw, 12px);
+    gap: clamp(5px, 1.5vw, 10px);
 `;
 // create 9 boxes
 for (let i = 0; i < 9; i++) {
@@ -59,20 +63,19 @@ for (let i = 0; i < 9; i++) {
 }
 let boxes = document.querySelectorAll(".boxs");
 boxes.forEach(function(box) {
-    box.style.cssText = `
+   box.style.cssText = `
     min-width: 0;
     min-height: 0;
     background-color: red;
     border: 2px solid black;
-    display: grid;
-    place-items: center;
-    font-size: 80px
-    padding:2px;
+    text-align: center;
+    font-size: clamp(40px, 12vw, 100px);
     font-weight: bold;
     color: white;
     border-radius: 15px;
-    cursor: pointer;
-    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
     box.addEventListener("mouseenter", function() {
         if (box.textContent === "" && header.textContent !== "X Wins!" && header.textContent !== "O Wins!") {
@@ -90,9 +93,9 @@ let role=document.createElement("h3");
 role.textContent="X 's Turn";
 container.appendChild(role);
 role.style.cssText = `
-font-size: clamp(20px, 3vw, 28px);
-width: min(100%, 240px);
+width: min(200px, 90%);
 box-sizing: border-box;
+font-size: clamp(20px, 4vw, 30px);
 text-align: center;
 color: white;
 border: 2px solid black;
