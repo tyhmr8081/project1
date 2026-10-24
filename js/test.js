@@ -46,7 +46,7 @@ boxContainer.id="boxContainer";
 container.appendChild(boxContainer);
 boxContainer.style.cssText = `
     width: 90%;
-    max-width: 600px;
+    max-width: 450px;
     height: 600px;
     aspect-ratio: 1 / 1;
     box-sizing: border-box;
