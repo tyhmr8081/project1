@@ -17,7 +17,7 @@ container.style.cssText = `
     padding: clamp(10px, 2vw, 20px);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     border-radius: 30px;
     box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
