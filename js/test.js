@@ -66,7 +66,8 @@ boxes.forEach(function(box) {
     border: 2px solid black;
     display: grid;
     place-items: center;
-    font-size: clamp(40px, 10vw, 100px);
+    font-size: 80px
+    padding:2px;
     font-weight: bold;
     color: white;
     border-radius: 15px;
