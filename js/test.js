@@ -47,14 +47,13 @@ container.appendChild(boxContainer);
 boxContainer.style.cssText = `
     width: 90%;
     max-width: 450px;
-    height: 600px;
     aspect-ratio: 1 / 1;
     box-sizing: border-box;
     margin: 0 auto;
     padding: clamp(5px, 1.5vw, 10px);
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-row:repeat(3,minmax(0,1fr);
+    grid-template-rows: repeat(3, minmax(0, 1fr));
     gap: clamp(5px, 1.5vw, 10px);
 `;
 // create 9 boxes
