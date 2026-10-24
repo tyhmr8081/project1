@@ -21,7 +21,7 @@ container.style.cssText = `
     align-items: center;
     border-radius: 30px;
     box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
-    gap:12px;
+    gap:10px;
 `;
 
 // create a header element
@@ -47,6 +47,7 @@ container.appendChild(boxContainer);
 boxContainer.style.cssText = `
     width: 90%;
     max-width: 600px;
+    height: 600px;
     aspect-ratio: 1 / 1;
     box-sizing: border-box;
     margin: 0 auto;
@@ -194,15 +195,18 @@ let resetButton=document.createElement("button");
 resetButton.textContent="New Game";
 container.appendChild(resetButton);
 resetButton.style.cssText = `
-width: 150px;
-height: 50px;
-font-size: 20px;
-font-weight: bold;
-background-color: blue;
-color: white;
-border-radius: 15px;
-border:none;
-`
+    width: 150px;
+    min-height: 48px;
+    padding: 8px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: blue;
+    color: white;
+    border-radius: 15px;
+    border: none;
+`;
 resetButton.addEventListener("click", function() {
     boxes.forEach(function(box) {
         box.textContent = "";
