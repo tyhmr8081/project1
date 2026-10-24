@@ -21,6 +21,7 @@ container.style.cssText = `
     align-items: center;
     border-radius: 30px;
     box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
+    gap:12px;
 `;
 
 // create a header element
